@@ -9,8 +9,10 @@ public class Jogo {
         Scanner sc = new Scanner(System.in);
 
         System.out.println("=== BATALHA NAVAL ===");
+        System.out.println();
         System.out.println("1 - Um jogador (vs Máquina)");
         System.out.println("2 - Dois jogadores");
+        System.out.println();
         System.out.print("Escolha o modo: ");
         int modo = sc.nextInt();
 
@@ -19,6 +21,7 @@ public class Jogo {
 
         sc.nextLine();
 
+        System.out.println();
         System.out.print("Nome do Jogador 1: ");
         String nome1 = sc.nextLine();
         List<Navio> navios1 = gerarNavios();
@@ -29,6 +32,7 @@ public class Jogo {
         if (modo == 1) {
             jogador2 = new Jogador("Máquina", tamanho, gerarNavios());
         } else {
+             
             System.out.print("Nome do Jogador 2: ");
             String nome2 = sc.nextLine();
             jogador2 = new Jogador(nome2, tamanho, gerarNavios());
